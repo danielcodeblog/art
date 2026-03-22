@@ -1,0 +1,5 @@
+{
+  "name": "Project Starter",
+  "description": "A clean starter for a Next.js application with Tailwind CSS and Framer Motion.",
+  "requestFramePermissions": []
+}

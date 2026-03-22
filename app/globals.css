@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Custom animations and effects */
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.bg-noise {
+  background-color: #0A0A0A;
+  background-attachment: fixed;
+}
+
+.white-3d-bg {
+  background: radial-gradient(circle at 50% 50%, #1A1A1A 0%, #0A0A0A 100%);
+}
+
+.card-3d {
+  background: #1A1A1A;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.blue-white-mix {
+  background: linear-gradient(135deg, #0A0A0A 0%, #0F172A 50%, #1E293B 100%);
+  background-attachment: fixed;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
