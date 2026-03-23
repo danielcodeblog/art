@@ -33,6 +33,13 @@ const projects = [
     video: 'https://player.vimeo.com/video/1175900712?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
+   {
+    id: 4,
+    title: 'URBAN PULSE',
+    category: 'COMMERCIALS',
+    video: 'https://vimeo.com/1176315881?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    poster: 'https://picsum.photos/seed/p2/800/1000',
+  },
 ];
 
 function VideoCard({ project, isActive }: { project: typeof projects[0], isActive: boolean }) {
