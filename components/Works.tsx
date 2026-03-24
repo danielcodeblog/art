@@ -33,15 +33,9 @@ const projects = [
     video: 'https://player.vimeo.com/video/1175900712?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
-   {
-    id: 4,
-    title: 'DINOVATE',
-    category: 'INTERVIEWS',
-    video: 'https://player.vimeo.com/video/1176315881?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
-    poster: 'https://picsum.photos/seed/p2/800/1000',
-  },
+
   {
-    id: 4,
+    id: 5,
     title: 'DINOVATE',
     category: 'JUST TALKS',
     video: 'https://player.vimeo.com/video/1176319403?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
