@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: 'VLOG',
     category: 'FEATURED',
-    video: 'https://player.vimeo.com/video/1176300266?autoplay=0&loop=1&badge=0&api=1&muted=1&controls=0',
+    video: 'https://player.vimeo.com/video/1176300266?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/new-project/1920/1080',
   },
   {
