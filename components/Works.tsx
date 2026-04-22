@@ -26,15 +26,13 @@ const projects = [
     video: 'https://player.vimeo.com/video/1176300266?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/new-project/1920/1080',
   },
-
   {
     id: 4,
     title: 'URBAN PULSE',
     category: 'COMMERCIALS',
-    video: 'https://vimeo.com/1185596905?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    video: 'https://player.vimeo.com/video/1185596905?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
-
   {
     id: 5,
     title: 'DINOVATE',
@@ -42,15 +40,15 @@ const projects = [
     video: 'https://player.vimeo.com/video/1176319403?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
-    {
+  {
     id: 6,
     title: 'DINOVATE',
     category: 'CLASSIC',
-    video: 'https://vimeo.com/1185612995?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    video: 'https://player.vimeo.com/video/1185612995?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
 ];
-https://vimeo.com/1185612995?
+
 function VideoCard({ project, isActive }: { project: typeof projects[0], isActive: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -60,13 +58,24 @@ function VideoCard({ project, isActive }: { project: typeof projects[0], isActiv
   const isVimeo = project.video.includes('vimeo');
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      if (!isActive) {
-        video.pause();
+    // Automatic pause/play logic
+    if (isVimeo && iframeRef.current) {
+      if (isActive) {
+        // We generally don't auto-play unmuted video due to browser policies
+        // but we can ensure it's at least paused when not active
+      } else {
+        iframeRef.current.contentWindow?.postMessage(JSON.stringify({ method: 'pause' }), '*');
+        setIsPlaying(false);
+      }
+    } else if (videoRef.current) {
+      if (isActive) {
+        // videoRef.current.play().catch(() => {}); // Optional: auto-play active video
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
       }
     }
-  }, [isActive]);
+  }, [isActive, isVimeo]);
 
   useEffect(() => {
     if (isVimeo && iframeRef.current) {
@@ -81,15 +90,15 @@ function VideoCard({ project, isActive }: { project: typeof projects[0], isActiv
   const togglePlay = () => {
     if (isVimeo && iframeRef.current) {
       const method = isPlaying ? 'pause' : 'play';
-      const message = { method };
-      iframeRef.current.contentWindow?.postMessage(JSON.stringify(message), '*');
+      iframeRef.current.contentWindow?.postMessage(JSON.stringify({ method }), '*');
       setIsPlaying(!isPlaying);
     } else if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
       } else {
-        videoRef.current.play();
+        videoRef.current.play().catch(console.error);
       }
+      setIsPlaying(!isPlaying);
     }
   };
 
