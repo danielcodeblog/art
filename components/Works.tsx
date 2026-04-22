@@ -43,7 +43,7 @@ const projects = [
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
     {
-    id: 5,
+    id: 6,
     title: 'DINOVATE',
     category: 'CLASSIC',
     video: 'https://vimeo.com/1185612995?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
