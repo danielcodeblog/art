@@ -26,11 +26,12 @@ const projects = [
     video: 'https://player.vimeo.com/video/1176300266?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/new-project/1920/1080',
   },
+
   {
     id: 4,
     title: 'URBAN PULSE',
     category: 'COMMERCIALS',
-    video: 'https://player.vimeo.com/video/1175900712?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    video: 'https://vimeo.com/1185596905?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
 
@@ -41,8 +42,15 @@ const projects = [
     video: 'https://player.vimeo.com/video/1176319403?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
+    {
+    id: 5,
+    title: 'DINOVATE',
+    category: 'CLASSIC',
+    video: 'https://vimeo.com/1185612995?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    poster: 'https://picsum.photos/seed/p2/800/1000',
+  },
 ];
-
+https://vimeo.com/1185612995?
 function VideoCard({ project, isActive }: { project: typeof projects[0], isActive: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
