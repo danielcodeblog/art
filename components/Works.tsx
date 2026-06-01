@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: 'SILENT ECHOES',
     category: 'NARRATIVE',
-    video: 'https://vimeo.com/1197342487?share=copy&fl=sv&fe=ci?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    video: 'https://vimeo.com/1197342487?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/silent-echoes/1920/1080',
   },
   {
