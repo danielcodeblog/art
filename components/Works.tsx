@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: 'SILENT ECHOES',
     category: 'NARRATIVE',
-    video: 'https://vimeo.com/1197342487?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    video: 'https://player.vimeo.com/video/1175901213?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/silent-echoes/1920/1080',
   },
   {
@@ -35,16 +35,16 @@ const projects = [
   },
   {
     id: 5,
-    title: 'DINOVATE',
+    title: 'SOOTHING',
     category: 'JUST TALKS',
-    video: 'https://player.vimeo.com/video/1176319403?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    video: 'https://player.vimeo.com/video/1197342487?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
   {
     id: 6,
     title: 'STARS',
     category: 'CLASSIC',
-    video: 'https://vimeo.com/1197347649?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
+    video: 'https://player.vimeo.com/video/1197347649?autoplay=0&loop=1&badge=0&autopause=0&api=1&muted=1&controls=0',
     poster: 'https://picsum.photos/seed/p2/800/1000',
   },
 ];
